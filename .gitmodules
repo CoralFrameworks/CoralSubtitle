@@ -1,0 +1,37 @@
+# Every dependency of this repository is a plain clone fetched by scripts/bootstrap.sh (or
+# scripts/bootstrap.ps1) rather than a `git submodule update` checkout. `update = none` keeps a
+# recursive update in a parent project from downloading copies the application tree already supplies;
+# the bootstrap tool clones the default remote branch of each entry and follows it on later runs.
+#
+# The paths are the ones the CMake configure searches: external/ for the frameworks and third_party/
+# for the shared libraries.
+
+[submodule "third_party/libz"]
+	path = third_party/libz
+	url = https://github.com/CoralFrameworks/libz.git
+	update = none
+
+[submodule "third_party/libyuv"]
+	path = third_party/libyuv
+	url = https://github.com/CoralFrameworks/libyuv.git
+	update = none
+
+[submodule "third_party/libgtest"]
+	path = third_party/libgtest
+	url = https://github.com/CoralFrameworks/libgtest.git
+	update = none
+
+[submodule "external/CoralCore"]
+	path = external/CoralCore
+	url = https://github.com/CoralFrameworks/CoralCore.git
+	update = none
+
+[submodule "external/CoralGraphics"]
+	path = external/CoralGraphics
+	url = https://github.com/CoralFrameworks/CoralGraphics.git
+	update = none
+
+[submodule "external/CoralMedia"]
+	path = external/CoralMedia
+	url = https://github.com/CoralFrameworks/CoralMedia.git
+	update = none

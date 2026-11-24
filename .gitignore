@@ -1,68 +1,69 @@
 # Prerequisites
 *.d
 
-# Compiled Object files
-*.slo
-*.lo
+# Dependencies fetched by scripts/bootstrap.sh and scripts/bootstrap.ps1. Their paths are recorded in
+# .gitmodules, but the bootstrap clones them as ordinary repositories (the `update = none` strategy
+# keeps a parent project's recursive update from downloading copies it supplies itself), so they are
+# never part of a commit of this repository.
+/external/
+/third_party/libz/
+/third_party/libyuv/
+/third_party/libgtest/
+
+# Build trees
+/build/
+/build-*/
+/cmake-build-*/
+/out/
+/out-*/
+ImportExecutables-*.cmake
+toolchains
+
+# IDE and editor state
+.DS_Store
+.idea
+.vscode
+*.swp
+*.bak
+
+# Build products
+*.d
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
+*.slo
+*.lo
 *.la
+*.lai
+*.out
 *.a
 *.lib
-
-# Executables
+*.so
+*.so.*
+*.dylib
+*.dll
 *.exe
-*.out
 *.app
-
-# Build directories
-[Bb]uild/
-[Bb]uild-*/
-cmake-build-*/
-
-# CMake generated files
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
-install_manifest.txt
-compile_commands.json
-
-# Temporary files
-*.tmp
-*.log
-*.bak
-*.swp
-
-# vcpkg
-vcpkg_installed/
-
-# debug information files
+*.mod
+*.smod
+*.ilk
+*.pdb
 *.dwo
-
-# test output & cache
+*.dSYM/
+*.gch
+*.pch
+compile_commands.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+Makefile
 Testing/
 .cache/
+
+# Temporary files and logs
+*.tmp
+*.log
+
+# The demo's default output when no window is shown
+subtitle_frame.png
+subtitle_demo_frame.png
